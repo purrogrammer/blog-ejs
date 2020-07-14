@@ -1,7 +1,13 @@
-<%-include("header")-%>
+<%-include("partials/header")-%>
 
 <h1>Hiya, Bitchez!!!</h1>
 
 <p> <%= startingContent %> </p>
 
-<%-include("footer")-%>
+<% posts.forEach(function(post) { %>
+        <h1> <%= post.title %> </h1> 
+        <p> <%= post.content %> </p> 
+            
+            <% }); %>
+
+<%-include("partials/footer")-%>
